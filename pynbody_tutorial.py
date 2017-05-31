@@ -2,11 +2,8 @@
 import pynbody
 s = pynbody.load('testdata/g15784.lr.01024.gz')
 h=s.halos()
-print h1
 h1=h[1]
-print('gas=%e)
 print('gas=%e, dark matter=%e, stars=%e'%(len(h1.gas), len(h1.dark), len(h1.star)))
-s
 pynbody.analysis.halo.center(h1,mode='hyb')
 my_h5_transform=pynbody.analysis.halo.center(h[5],mode='hyb', move_all=False)
 my_h5_transform.revert()
@@ -18,7 +15,35 @@ cen_pot=pynbody.analysis.halo.center(h1, mode='pot', retcen=True)
 print(cen_hyb)
 print(cen_pot)
 s['pos']-=cen_hyb
-s.physical units()
 s.physical_units()
 pynbody.plot.image(h1.g, width=100, cmap='Blues');
 pynbody.plot.image(s.d[pynbody.filt.Sphere('10 Mpc')], width='10 Mpc', units='Msol kpc^-2',cmap='Greys');
+get_ipython().magic(u'run pynbody_tutorial.py')
+import matplotlib.pyplot as plt
+ps=pynbody.analysis.profile.Profile(h1.s,min=0.1, max=50, type='log')
+plt.clf()
+print h[1]
+print (h[1])
+plt.clf()
+plt.plot(ps['rbins'],ps['density']);
+get_ipython().magic(u'i')
+get_ipython().magic(u'i')
+import matplotlib.pylab as plt
+plt.clf()
+plt.plot(ps['rbins'],ps['density']);
+get_ipython().magic(u'pylab')
+import matplotlib.pylab as plt
+plt.clf()
+plt.plot(ps['rbins'],ps['density']);
+plt.semilogy();
+plt.xlabel('$R$ [kpc]');
+plt.ylabel('$\Sigma$ [M$_\odot$/kpc$^2$]');
+plt.figure()
+pd=pynbody.analysis.profile.Profile(h1.d, min=0.01, max=50, type='log')
+pg=pynbody.analysis.profile.Profile(h1.g, min=0.01, max=50, type='log')
+for prof, name in zip([p,pd,ps,pg],['total','dm','stars','gas']) : plt.plot(prof['rbins'],prof['v_circ'], label=name)
+p=pynbody.analysis.profile.Profile(h1, min=0.01, max=50, type='log')
+for prof, name in zip([p,pd,ps,pg],['total','dm','stars','gas']) : plt.plot(prof['rbins'],prof['v_circ'], label=name)
+plt.xlabel('$R$ [kpc]');
+plt.ylabel('$v_{circ}$ [km/s]');
+plt.legend()
