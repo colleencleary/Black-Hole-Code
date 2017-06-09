@@ -1,0 +1,8 @@
+ Total number of particles
+     1160975
+ Total number of dark matter particles
+     1000000
+ Total number of star particles
+      160975
+ Total number of sink particles
+           0

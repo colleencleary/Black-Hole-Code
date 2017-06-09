@@ -1,0 +1,5 @@
+This tar contains test data for the pynbody test suite and documentation.
+
+Please unzip inside the nose folder of the pynbody distribution 
+(so you should end up with a folder nose/testdata with lots of
+files inside, including this one.)

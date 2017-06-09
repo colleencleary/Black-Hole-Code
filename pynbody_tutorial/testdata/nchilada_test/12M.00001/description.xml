@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<simulation>
+	<family name="gas">
+		<attribute name="HI" link="gas/HI"/>
+		<attribute name="HeI" link="gas/HeI"/>
+		<attribute name="position" link="gas/pos"/>
+		<attribute name="potential" link="gas/pot"/>
+		<attribute name="vel" link="gas/vel"/>
+		<attribute name="HeII" link="gas/HeII"/>
+		<attribute name="mass" link="gas/mass"/>
+		<attribute name="OxMassFrac" link="gas/OxMassFrac"/>
+		<attribute name="smoothlength" link="gas/smoothlength"/>
+		<attribute name="ESNRate" link="gas/ESNRate"/>
+		<attribute name="GasDensity" link="gas/GasDensity"/>
+		<attribute name="temperature" link="gas/temperature"/>
+		<attribute name="FeMassFrac" link="gas/FeMassFrac"/>
+		<attribute name="coolontime" link="gas/coolontime"/>
+	</family>
+	<family name="dark">
+		<attribute name="position" link="dark/pos"/>
+		<attribute name="potential" link="dark/pot"/>
+		<attribute name="vel" link="dark/vel"/>
+		<attribute name="mass" link="dark/mass"/>
+		<attribute name="smoothlength" link="dark/smoothlength"/>
+	</family>
+	<family name="star">
+		<attribute name="position" link="star/pos"/>
+		<attribute name="potential" link="star/pot"/>
+		<attribute name="vel" link="star/vel"/>
+		<attribute name="mass" link="star/mass"/>
+		<attribute name="OxMassFrac" link="star/OxMassFrac"/>
+		<attribute name="smoothlength" link="star/smoothlength"/>
+		<attribute name="igasorder" link="star/igasorder"/>
+		<attribute name="ESNRate" link="star/ESNRate"/>
+		<attribute name="massform" link="star/massform"/>
+		<attribute name="timeform" link="star/timeform"/>
+		<attribute name="FeMassFrac" link="star/FeMassFrac"/>
+	</family>
+</simulation>

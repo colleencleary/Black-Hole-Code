@@ -1,0 +1,4 @@
+This is an incomplete output from a ramses test run. Only the first 4 CPUs are included.
+
+It is suitable for testing the Ramses loader, but not for testing other functionality since it's
+not a complete snapshot.
